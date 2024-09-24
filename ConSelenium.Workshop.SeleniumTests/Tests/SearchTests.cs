@@ -2,9 +2,11 @@
 using ConSelenium.Workshop.SeleniumTests.Tests.Base;
 using ConSelenium.Workshop.SeleniumTests.Pages;
 using FluentAssertions;
+using Allure.NUnit;
 
 namespace ConSelenium.Workshop.SeleniumTests.Tests
 {
+    [AllureNUnit]
     public class SearchTests : BaseTest
     {
         [Test]

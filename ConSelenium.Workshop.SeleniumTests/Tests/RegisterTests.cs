@@ -2,9 +2,11 @@
 using FluentAssertions.Execution;
 using ConSelenium.Workshop.SeleniumTests.Pages;
 using FluentAssertions;
+using Allure.NUnit;
 
 namespace ConSelenium.Workshop.SeleniumTests.Tests
 {
+    [AllureNUnit]
     public class RegisterTests : BaseTest
     {
         [Test]

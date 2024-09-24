@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace ConSelenium.Workshop.SeleniumTests.Pages
 {
-    public class RegisterPage : BasePage
+    public class UserDetailsPage : BasePage
     {
         public Input NameInput;
         public Input SurnameInput;
@@ -14,17 +14,15 @@ namespace ConSelenium.Workshop.SeleniumTests.Pages
         public Input CityInput;
         public Input PhoneNumerInput;
         public Input UserEmailInput;
-        public Input PasswordInput;
-        public Input PasswordConfInput;
 
         public Select ProvinceSelect;
 
         public CheckBox DataAcceptCheckbox;
         public CheckBox ShopRegCheckbox;
 
-        public Button SubmitButton;
+        public Button FormSubmitButton;
 
-        public RegisterPage(IWebDriver driver) : base(driver)
+        public UserDetailsPage(IWebDriver driver) : base(driver)
         {
             NameInput = new Input(driver, By.Id("i_name"));
             SurnameInput = new Input(driver, By.Id("i_surname"));
@@ -34,20 +32,13 @@ namespace ConSelenium.Workshop.SeleniumTests.Pages
             CityInput = new Input(driver, By.Id("i_city"));
             PhoneNumerInput = new Input(driver, By.Id("i_phone"));
             UserEmailInput = new Input(driver, By.Id("i_email"));
-            PasswordInput = new Input(driver, By.Id("i_reg_password"));
-            PasswordConfInput = new Input(driver, By.Id("i_reg_passwordConf"));
 
             ProvinceSelect = new Select(driver, By.XPath(".//*[@title='Proszę wybrać region']"));
 
             DataAcceptCheckbox = new CheckBox(driver, By.Id("i_dataAccept"));
             ShopRegCheckbox = new CheckBox(driver, By.Id("i_shopReg"));
 
-            SubmitButton = new Button(driver, By.Id("reg_submit"));
-        }
-
-        public void GoTo()
-        {
-            driver.Navigate().GoToUrl(BASE_URL + "rejestracja.php");
+            FormSubmitButton = new Button(driver, By.Id("reg_submit"));
         }
     }
 }

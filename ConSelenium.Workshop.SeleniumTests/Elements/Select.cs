@@ -1,7 +1,6 @@
 ﻿using ConSelenium.Workshop.SeleniumTests.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 
 namespace ConSelenium.Workshop.SeleniumTests.Elements
 {
